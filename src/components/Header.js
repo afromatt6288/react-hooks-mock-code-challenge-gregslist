@@ -1,7 +1,8 @@
 import React from "react";
 import Search from "./Search";
+import NewListingForm from "./NewListingForm"
 
-function Header() {
+function Header({onSubmit, onAdd}) {
   return (
     <header>
       <h1>
@@ -10,7 +11,10 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search onSubmit={onSubmit}/>
+      <span>
+      <NewListingForm onAdd={onAdd}/>
+      </span>
     </header>
   );
 }
